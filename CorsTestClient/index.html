@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link href="./bootstrap4-neon-glow.min.css" rel="stylesheet" />
+	</head>
+	<body>
+        <div class="container" id="app">
+            <H1>CORS Test Client</H1>
+            <p>A simple HTTP client built with Vue.js used to generate requests from a remote location to aid in testing CORS configurations.</p>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button v-on:click="sendGet()" class="btn btn-success" type="button">GET</button>
+                </div>
+                <input v-model="uri" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <button v-on:click="reset()" class="btn btn-secondary" type="button">Reset</button>
+                </div>
+            </div>
+            <br>
+            <div v-if="result" class="col-12 alert" v-bind:class="{ 'alert-primary': !isError, 'alert-danger': isError }" role="alert">
+                {{result}}
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
