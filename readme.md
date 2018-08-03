@@ -1,5 +1,5 @@
 ## CorsExplorer
-A simple applicaiton to help explore CORS in .NET Core.
+A simple application to help explore CORS in .NET Core.
 <hr>
 
 ### CorsExplorerWebApi
